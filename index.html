@@ -1,21 +1,28 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.js"></script>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
   </head>
-  <body style="margin: 0; overflow: hidden">
+  <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
+      
       <!-- Marcador personalizado -->
-      <a-marker type="pattern" url="./assets/marcadores/pattern-corazon.patt">
-        <!-- Imagen que aparecerá sobre el cuadro -->
-        <a-image
-          src="./assets/imagenes/fondo.png"
-          position="0 0 0"
-          rotation="-90 0 0"
-          width="2"
-          height="2"
-        ></a-image>
+      <a-marker type="pattern" url="./assets/markers/manos.patt">
+        <a-image src="./assets/imagenes/letra.png"
+                 position="0 0 1.5"
+                 rotation="-90 0 0"
+                 width="2"
+                 height="2">
+                 
+        </a-image>
+        <a-image src="./assets/imagenes/capi.png"
+                 position="0 10 0.5"
+                 rotation="-90 0 0"
+                 width="2"
+                 height="2">
       </a-marker>
+
       <a-entity camera></a-entity>
     </a-scene>
   </body>
